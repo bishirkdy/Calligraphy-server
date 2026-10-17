@@ -1,0 +1,6 @@
+@Calligraphy.Api_HostAddress = http://localhost:5210
+
+GET {{Calligraphy.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

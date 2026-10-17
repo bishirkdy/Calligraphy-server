@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../Calligraphy.Application/Calligraphy.Application.csproj" />
+  <Project Path="../Calligraphy.Domain/Calligraphy.Domain.csproj" />
+  <Project Path="../Calligraphy.Infrastructure/Calligraphy.Infrastructure.csproj" />
+  <Project Path="Calligraphy.Api.csproj" />
+</Solution>
