@@ -1,4 +1,5 @@
 using Calligraphy.Infrastructure.Extensions;
+using Calligraphy.Infrastructure.Data;
 using Calligraphy.Application.Configuration;
 using Microsoft.OpenApi;
 var builder = WebApplication.CreateBuilder(args);
@@ -72,5 +73,11 @@ app.UseAuthorization();
 
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    await AdminSeeder.SeedAsync(context, app.Configuration);
+}
 
 app.Run();
